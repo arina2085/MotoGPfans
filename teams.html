@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="index.html" class="header__logo">
+                <span class="header__logo-text">MotoGP</span>
+            </a>
+
+            <nav class="header__nav" id="main-nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
+                    <li class="header__nav-item"><a href="racers.html" class="header__nav-link">Гонщики</a></li>
+                    <li class="header__nav-item"><a href="teams.html" class="header__nav-link">Команды</a></li>
+                    <li class="header__nav-item"><a href="calendar.html" class="header__nav-link">Календарь</a></li>
+                    <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+    
+            <button class="header__burger" id="burger-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="teams">
+        <div class="container teams__container">
+            <h2 class="section__title">Заводские команды MotoGP</h2>
+            <div class="teams__grid">
+
+                <article class="team-card team-card--ducati">
+                    <h3 class="team-card__title">Ducati Lenovo Team</h3>
+                    <p class="team-card__riders">Пилоты: Ф. Баньяя, Э. Бастьянини</p>
+                    <p class="team-card__description">Итальянский гигант, доминирующий в чемпионате. Команда известна своими
+                        мощными двигателями, передовой аэродинамикой (винглеты) и сильнейшим составом пилотов.</p>
+                </article>
+
+                <article class="team-card team-card--aprilia">
+                    <h3 class="team-card__title">Aprilia Racing</h3>
+                    <p class="team-card__riders">Пилоты: Х. Мартин, М. Виньялес</p>
+                    <p class="team-card__description">Технологичный и амбициозный проект из Ноле. Команда совершила
+                        стремительный рывок в последние годы благодаря инновационной конструкции шасси и аэродинамике.</p>
+                </article>
+
+                <article class="team-card team-card--yamaha">
+                    <h3 class="team-card__title">Monster Energy Yamaha</h3>
+                    <p class="team-card__riders">Пилоты: Ф. Куартараро, А. Ринс</p>
+                    <p class="team-card__description">Легендарная японская команда с богатой историей побед. Делает ставку
+                        на плавность управления, отличную работу с задней шиной и классический стиль пилотирования.</p>
+                </article>
+
+                <article class="team-card team-card--ktm">
+                    <h3 class="team-card__title">Red Bull KTM Factory</h3>
+                    <p class="team-card__riders">Пилоты: П. Акоста, Б. Биндер</p>
+                    <p class="team-card__description">Австрийская "оранжевая армия". Славится агрессивным стилем езды,
+                        уникальным шасси из хромомолибденовой стали и бескомпромиссной борьбой на трассе.</p>
+                </article>
+    
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__text">© 2026 MotoGPfans.</p>
+            <p class="footer__text">Пешкова Арина ИС-23</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

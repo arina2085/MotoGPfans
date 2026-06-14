@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="index.html" class="header__logo">
+                <span class="header__logo-text">MotoGP</span>
+            </a>
+
+            <nav class="header__nav" id="main-nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
+                    <li class="header__nav-item"><a href="racers.html" class="header__nav-link">Гонщики</a></li>
+                    <li class="header__nav-item"><a href="teams.html" class="header__nav-link">Команды</a></li>
+                    <li class="header__nav-item"><a href="calendar.html" class="header__nav-link">Календарь</a></li>
+                    <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+    
+            <button class="header__burger" id="burger-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="contact" class="section section--alt" style="height: 859px;">
+        <div class="container">
+            <h2 class="section__title">Сяжитесь с нами</h2>
+            <div class="contact-wrapper">
+
+                <form class="form" id="feedback-form" novalidate action="https://formspree.io/f/mlgkaoea" method="post">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Ваше имя</label>
+                        <input type="text" id="name" name="name" class="form__input" placeholder="Иван Иванов" required>
+                        <span class="form__error" id="name-error"></span>
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" id="email" name="email" class="form__input" placeholder="example@mail.ru" required>
+                        <span class="form__error" id="email-error"></span>
+                    </div>
+                    <div class="form__group">
+                        <label for="message" class="form__label">Сообщение</label>
+                        <textarea id="message" name="message" class="form__textarea" placeholder="Ваш текст..." required
+                            minlength="10"></textarea>
+                        <span class="form__error" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="form__submit">Отправить сообщение</button>
+
+                    <div class="form__status" id="form-status" style="display: none;"></div>
+                </form>
+
+                <div class="map-container">
+                    <h3 class="map-container__title">Наше расположение</h3>
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad29a4ccef9caa50a158de3433d32881e7225caa5a7f4351d8749f2b4ef94585f&amp;source=constructor"
+                        width="687" height="400" frameborder="0"></iframe>
+                    <p class="map-container__address">г. Москва, ул. Спортивная, д. 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__text">© 2026 MotoGPfans.</p>
+            <p class="footer__text">Пешкова Арина ИС-23</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
