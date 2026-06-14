@@ -384,7 +384,7 @@ body {
 .rider-card__content {
     padding: 25px;
     text-align: center;
-    flex-grow: 1; /* Растягивает контент, чтобы карточки были одной высоты */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -398,7 +398,7 @@ body {
 
 .rider-card__team {
     font-size: 0.85rem;
-    color: var(--color-primary); /* Красный акцент из ваших переменных */
+    color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
@@ -453,37 +453,50 @@ body {
 
 /*TEAMS*/
 .teams {
-    padding: 80px 0;
-    background-color: var(--color-gray);
-    height: 859px;
+    padding: 60px 0;
+    background-color: var(--color-gray, #f4f4f4);
+}
+
+.teams__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-dark, #1a1a1a);
 }
 
 .teams__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    width: 100%;
 }
 
 .team-card {
-    background-color: var(--color-light);
+    background-color: white;
     border-radius: 12px;
     padding: 30px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top: 5px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .team-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .team-card__title {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: var(--color-dark);
+    color: var(--color-dark, #1a1a1a);
 }
 
 .team-card__riders {
@@ -492,55 +505,89 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
-    color: var(--color-text);
 }
 
 .team-card__description {
     font-size: 0.95rem;
-    color: var(--color-text);
+    color: var(--color-text, #666);
     line-height: 1.6;
 }
 
-.team-card--ducati {
-    border-top-color: #cc0000;
-}
-.team-card--ducati .team-card__riders {
-    color: #cc0000;
-}
+.team-card--ducati { border-top-color: #cc0000; }
+.team-card--ducati .team-card__riders { color: #cc0000; }
 
-.team-card--aprilia {
-    border-top-color: #005eb8;
-}
-.team-card--aprilia .team-card__riders {
-    color: #005eb8;
-}
+.team-card--aprilia { border-top-color: #005eb8; }
+.team-card--aprilia .team-card__riders { color: #005eb8; }
 
-.team-card--yamaha {
-    border-top-color: #0036bc;
-}
-.team-card--yamaha .team-card__riders {
-    color: #0036bc;
-}
+.team-card--yamaha { border-top-color: #0036bc; }
+.team-card--yamaha .team-card__riders { color: #0036bc; }
 
-.team-card--ktm {
-    border-top-color: #ff6600;
-}
-.team-card--ktm .team-card__riders {
-    color: #ff6600;
-}
+.team-card--ktm { border-top-color: #ff6600; }
+.team-card--ktm .team-card__riders { color: #ff6600; }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .teams {
-        padding: 50px 0;
+        padding: 40px 0;
     }
     
+    .teams__container {
+        padding: 0 15px;
+    }
+    
+    .section__title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
     .teams__grid {
-        grid-template-columns: 1fr; 
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 20px;
+        width: 100%;
     }
     
     .team-card {
-        padding: 25px;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    .team-card__title {
+        font-size: 1.2rem;
+    }
+    
+    .team-card__description {
+        font-size: 0.9rem;
+        line-height: 1.5 
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .teams {
+        padding: 30px 0 
+    }
+    
+    .teams__grid {
+        gap: 15px 
+    }
+    
+    .team-card {
+        padding: 15px 12px ;
+    }
+    
+    .team-card__title {
+        font-size: 1.1rem 
+    }
+    
+    .team-card__riders {
+        font-size: 0.75rem
+    }
+    
+    .team-card__description {
+        font-size: 0.85rem;
+        line-height: 1.4 
     }
 }
 
@@ -866,6 +913,7 @@ body {
 @media (max-width: 380px) {
     .section__title {
         font-size: 1.3rem;
+        margin-top: 50px;
     }
 
     .form__submit {
@@ -928,5 +976,16 @@ body {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+    }
+
+    .footer {
+        padding: 20px 0;
+
+    }
+
+    .footer__text {
+        font-size: 0.8rem;
+        margin: 5px 0;
+        line-height: 1.3;
     }
 }
